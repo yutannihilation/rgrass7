@@ -95,7 +95,7 @@ readVECT <- function(vname, layer, type=NULL, plugin=NULL,
         stopifnot(length(driver) == 1)
         stopifnot(driver %in% candDrivers)
     } else {
-        preferDriver <- c("SQLite", "ESRI_Shapefile")
+        preferDriver <- c("SQLite", "ESRI Shapefile")
         for (d in preferDriver) {
             if (d %in% candDrivers) {
                 driver <- d
@@ -106,7 +106,7 @@ readVECT <- function(vname, layer, type=NULL, plugin=NULL,
     stopifnot(!is.null(driver))
 
     fDrivers <- c("GML", "SQLite")
-    dDrivers <- c("ESRI_Shapefile", "MapInfo_File")
+    dDrivers <- c("ESRI Shapefile", "MapInfo File")
 
     is_dDriver <- TRUE
     if (gsub(" ", "_", driver) %in% fDrivers) is_dDriver <- FALSE
@@ -382,7 +382,7 @@ writeVECT <- function(SDF, vname, #factor2char = TRUE,
         stopifnot(length(driver) == 1)
         stopifnot(driver %in% candDrivers)
     } else {
-        preferDriver <- c("SQLite", "ESRI_Shapefile")
+        preferDriver <- c("SQLite", "ESRI Shapefile")
         for (d in preferDriver) {
             if (d %in% candDrivers) {
                 driver <- d
@@ -396,7 +396,7 @@ writeVECT <- function(SDF, vname, #factor2char = TRUE,
         {
 #FIXME
             fDrivers <- c("GML", "SQLite")
-            dDrivers <- c("ESRI_Shapefile", "MapInfo_File")
+            dDrivers <- c("ESRI Shapefile", "MapInfo File")
             is_dDriver <- TRUE
             if (gsub(" ", "_", driver) %in% fDrivers) is_dDriver <- FALSE
             sss <- strsplit(packageDescription("rgdal")$Version, "-")[[1]]
